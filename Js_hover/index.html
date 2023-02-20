@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .one{
+            display: flex;
+            margin-top: 8%;
+        }
+        .two{
+            margin-left: 15%;
+            width: 50%;
+        }
+        .three{
+            margin-left: 30%;
+            width: 50%;
+        }
+        #circle{   
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            background-color:green;
+        }
+    </style>
+    <h1 style="text-align: center;">Js hover</h1>
+  <div class="one">
+    <div class="two">
+    <h1>Click the image</h1>
+    <img id="m1" src="m1.png" alt="" onclick="changeimg()">
+</div>
+<div class="three">
+    <h1>Click the circle</h1>
+     <div id="circle"></div>
+</div >
+  </div>
+  <script>
+ function changeimg(){
+            var img=document.getElementById("m1");
+            if(img.src.match("m1.png")){
+                img.src="m2.png"
+            }else if(img.src.match("m2.png")){
+                img.src="m3.png"
+            }else{
+                img.src="m1.png"
+            }
+        }
+
+const circle = document.getElementById("circle");
+circle.addEventListener("mouseover", function() {
+  circle.style.backgroundColor = "yellow";
+  circle.style.transform = "scale(1.1)"
+});
+
+circle.addEventListener("mouseout", function() {
+  circle.style.backgroundColor = "green";
+  circle.style.transform = "scale(1)"
+});
+    </script>
+</body>
+</html>
